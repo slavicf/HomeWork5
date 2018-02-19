@@ -39,8 +39,8 @@ public class CarDoor {              // На прямую к переменным
     } // открыть/закрыть окно
 
     public void show() {
-        System.out.println("CarDoor state");
-        System.out.println("Car door - " + (doorState ? "opened" : "closed"));
-        System.out.println("Car window - " + (windowState ? "opened" : "closed\n"));
+        System.out.println("Состояние двери: ");
+        System.out.println("Дверь: " + (doorState ? "открыта" : "закрыта"));
+        System.out.println("Окно: " + (windowState ? "открыто\n" : "закрыто\n"));
     } // Вывести в консоль данные об объекте
 }
