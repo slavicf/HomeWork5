@@ -2,30 +2,29 @@ package wehicle;
 
 public class CarWheel {
 
-    private double wheelShape;          // Состояние целостности шины (дробное число от 0-стерта до 1-новая)
+    private double wearOut;             // Состояние целостности шины (дробное число от 0-стерта до 1-новая)
 
-    public CarWheel() {                 // должен присвоить переменным значения на случай если данных нет
+    public CarWheel() {
         this(0.0);
-    }
+    } // должен присвоить переменным значения на случай если данных нет
 
-    public CarWheel(double wheelShape) {    // принимает состояние шины и присваивает это значение переменной внутри объекта
-        this.wheelShape = wheelShape;
-    }
+    public CarWheel(double wearOut) {
+        this.wearOut = wearOut;
+    } // принимает состояние шины и присваивает это значение переменной внутри объекта
 
-    public void changeWheel() {         // Сменить шину на новую
-        wheelShape = 1.0;
-    }
+    public void newWheel() {
+        wearOut = 1.0;
+    } // Сменить шину на новую
 
-    public void wearWheel(double wheelWear) {   // Стереть шину на X%
-        wheelShape = wheelShape * wheelWear / 100.0;
-    }
+    public void wear(double wear) {
+        wearOut = wearOut * wear / 100.0;
+    } // Стереть шину на X%
 
-    public double wheelState() {        // Получить состояние (return)
-        return wheelShape;
-    }
+    public double state() {
+        return wearOut;
+    } // Получить состояние (return)
 
-    public void show() {                // Вывести в консоль данные об объекте
-        System.out.println("Wheel state - " + wheelShape);
-        System.out.println();
-    }
+    public void show() {
+        System.out.println("Состояние колеса " + wearOut);
+    } // Вывести в консоль данные об объекте
 }
